@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Emergency Ambulance Routing Simulation</title>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>🚑 Emergency Routing</h2>
+
+  <div class="card">
+    <h3>Ambulance A</h3>
+    <button onclick="selectAmbulance('A')">Select Start & Destination</button>
+    <select id="priorityA">
+      <option value="1">Priority 1 (Critical)</option>
+      <option value="2">Priority 2</option>
+      <option value="3">Priority 3</option>
+      <option value="4">Priority 4</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <h3>Ambulance B</h3>
+    <button onclick="selectAmbulance('B')">Select Start & Destination</button>
+    <select id="priorityB">
+      <option value="1">Priority 1 (Critical)</option>
+      <option value="2">Priority 2</option>
+      <option value="3">Priority 3</option>
+      <option value="4">Priority 4</option>
+    </select>
+  </div>
+
+  <button class="run" onclick="runSimulation()">Run Simulation</button>
+  <button class="reset" onclick="resetSimulation()">Reset</button>
+</div>
+
+<!-- SINGLE floating message box -->
+<div id="messageBox"></div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
